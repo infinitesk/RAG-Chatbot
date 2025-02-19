@@ -13,7 +13,7 @@ load_dotenv()
 langchain_api_key = os.getenv("LANGCHAIN_API_KEY")
 os.environ["LANGSMITH_TRACING"] = "true"
 os.environ["LANGSMITH_ENDPOINT"] = "https://api.smith.langchain.com"
-os.environ["LANGSMITH_API_KEY"] = "langchain_api_key"
+os.environ["LANGSMITH_API_KEY"] = f"{langchain_api_key}"
 os.environ["LANGSMITH_PROJECT"] = "rag_chatbot"
 
 # Set up logging
